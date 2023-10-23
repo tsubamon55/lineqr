@@ -42,7 +42,7 @@ def callback():
 def handle_message(event):
     filename = f'img-{uuid.uuid4()}.png'
     qr = qrcode.make(event.message.text)
-    qr.save(f'qrcode/{filename}')
+    qr.save(f'/static/qrcode/{filename}')
     img_url = f'{request.url_root}/static/qrcode/{filename}'
     line_bot_api.reply_message(
         event.reply_token,
