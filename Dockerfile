@@ -46,4 +46,4 @@ COPY . .
 EXPOSE 8100
 
 # Run the application.
-CMD gunicorn -w 4 main:app --bind==0.0.0.0:8100
+CMD gunicorn -w 4 main:app --bind=0.0.0.0:8100
